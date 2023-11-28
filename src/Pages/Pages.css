@@ -1,0 +1,59 @@
+.hero-image {
+    object-fit: contain;
+    z-index: 100;
+}
+
+
+.hero-design {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-design span {
+    position: absolute;
+    inset: 0;
+    border: 2px solid blue;
+    opacity: 0.5;
+}
+
+.hero-design span:nth-child(3){
+    border-radius: 71% 29% 42% 58% / 66% 61% 39% 34%  ;
+    animation: animateSqure 9s linear  infinite;
+}
+.hero-design span:nth-child(2){
+    border-radius: 33% 67% 36% 64% / 57% 35% 65% 43%   ;
+    animation: animateSqure 6s linear  infinite;
+}
+.hero-design span:nth-child(4){
+    border-radius: 49% 51% 58% 42% / 77% 61% 39% 23%   ;
+    animation: animateSqure2 6s linear  infinite;
+}
+
+.slide {
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.slide::-webkit-scrollbar{
+    display: none;
+}
+
+@keyframes animateSqure {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes animateSqure2 {
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+

@@ -1,0 +1,14 @@
+.navber {
+    
+}
+.nav-menu .nav-item .link{
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.nav-menu .nav-item .active {
+    padding-bottom: 12px;
+    color: blue;
+}
