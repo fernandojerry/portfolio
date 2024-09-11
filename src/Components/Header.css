@@ -1,14 +1,109 @@
+
+.my-nav {
+    height: 100%;
+  }
+  
 .navber {
-    
+    height: vh;
 }
+  .navbar-toggler {
+    padding-top: 8px;
+    width: 28px;
+    height: 20px;
+    position: relative;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .navbar-toggler,
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+  .navbar-toggler span {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .toggler-icon {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: blue;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+  
+  .mid-bar {
+    margin-top: 0px;
+  }
+  
+  /* when navbar is clicked*/
+  .navbar-toggler .top-bar {
+    margin-top: 0;
+    transform: rotate(135deg);
+  }
+  
+  .navbar-toggler .mid-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  
+  .navbar-toggler .bottom-bar {
+    margin-top: 0;
+    transform: rotate(-135deg);
+  }
+  
+  /* state when navbar iscollapsed*/
+  .navbar-toggler.collapsed .top-bar {
+    margin-top: -10px;
+    transform: rotate(0deg);
+  }
+  
+  .navbar-toggler.collapsed .mid-bar {
+    opacity: 1;
+    width: 24px;
+    filter: alpha(opacity=100);
+  }
+  
+  .navbar-toggler.collapsed .bottom-bar {
+    margin-top: 10px;
+    width: 20px;
+    transform: rotate(0deg);
+  }
+  
+  .top__header {
+    background-color: #001d38;
+    padding: 12px 0;
+  }
+  
+  .logo {
+    height: 6rem;
+    width: 8rem;
+    -o-object-fit: contain;
+    object-fit: contain;
+  } 
+
+
 .nav-menu .nav-item .link{
-    color: #ffffff;
+    color: #ffffff !important;
     text-decoration: none;
     cursor: pointer;
 }
 
-
 .nav-menu .nav-item .active {
-    padding-bottom: 12px;
-    color: blue;
+    padding-bottom: 5px;
+    border-bottom: 3px blue solid;
+}
+
+.nav-menu .nav-item .link:hover {
+    padding-bottom: 5px;
+    border-bottom: 3px blue solid;
 }

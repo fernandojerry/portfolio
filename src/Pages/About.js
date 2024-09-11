@@ -1,26 +1,35 @@
-import React from 'react'
-import {Container, Row, Col} from 'react-bootstrap'
-import HeroBg from '../Assets/Images/hero.png'
+import React from 'react';
+import HeroBg from '../Assets/Images/hero.png';
 
 function About() {
   return (
-    <section id='about' className='container-fluid  pt-5 ps-2 pe-2 ps-md-5 pe-md-5 pb-5'>
-      <Container className='ps-lg-5 pe-lg-5'>
-        <Row className='ps-lg-5 pe-lg-5 pt-md-4 pb-md-4'>
-          <Col xs={12} md={6} className=' d-flex  flex-column '>
-            <h6 className='text-primary text-uppercase pb-2 fw-bold' >about me</h6>
-            
-            <p className='fs-5'>I am a dedicated frontend developer based in Enugu, Nigeria with years of experience and a track record of building scalable front-end projects with great user experience. passionate about learning and development with a desire to tackle complex problems by applying skills to find ways to maximize user efficiency. Adept at both independent and collaborative projects, with an emphasis on landing page and website development.</p>
-          </Col>
-          <Col xs={12} sm md={{ order: 'first' }} className='d-flex align-items-center justify-content-center'>
-            <div className='p-4'>
-              <img className='hero-image' w-100 src={HeroBg} alt="" />
+    <section id="about" className="bg-gray-100 py-10 px-4 md:px-8 lg:px-16">
+      <div className="container mx-auto">
+        <div className="flex flex-col md:flex-row justify-center items-center">
+          {/* Image Column */}
+          <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
+            <div className="relative w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-full">
+              <img 
+                src={HeroBg} 
+                alt="About Image" 
+                className="w-full h-auto object-cover rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-500"
+              />
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+          
+          {/* Text Column */}
+          <div className="w-full md:w-1/2 flex flex-col justify-center items-start md:pl-8">
+            <h6 className="text-blue-600 text-lg uppercase font-bold mb-2 animate-fade-in">
+              About Me
+            </h6>
+            <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-4 animate-fade-in delay-1">
+              I am a dedicated frontend developer based in Enugu, Nigeria, with years of experience and a track record of building scalable front-end projects with great user experience. I am passionate about learning and development, with a desire to tackle complex problems by applying my skills to find ways to maximize user efficiency. I am adept at both independent and collaborative projects, with an emphasis on landing page and website development.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;

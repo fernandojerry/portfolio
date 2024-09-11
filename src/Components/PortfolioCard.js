@@ -1,26 +1,26 @@
 import React from 'react'
-import { Button, Col } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import './Portfolio.css'
 
-const PortfolioCard = ({item}) => {
+const PortfolioCard = ({ item }) => {
   return (
-    <>
-        <Col sm={12} md={6} lg={4} xl >
-        <div className='img__container w-100 pt-2 pb-2' >
-          <img className='w-100 portfolio__img' src={item.imgUrl} alt="" />    
-        </div>
-        <div>
-          <h4 className='fs-3 fw-5'>{item.projectName}</h4>
-        <p className='pt-3 fs-5'>{item.description}</p>
-        <p className='pt-3 fs-5'><strong>Tech used: {item.techUsed}</strong></p>
-        <Button className='p-2'><a className='text-light fs-5 fw-4 text-decoration-none' target='blank' href={item.link}>Live Demo</a></Button>
-        <div>
+<div className='bg-white rounded-lg shadow-md my-4 h-full flex flex-col'>
+  <div className='img__container mb-4'>
+    <img className='w-full h-48 object-cover rounded-lg' src={item.imgUrl} alt={item.projectName} />
+  </div>
+  <h4 className='text-xl font-semibold mb-2'>{item.projectName}</h4>
 
-        </div>
-        </div>
-        </Col>
+  <div className='h-12 my-2'>
+    <p className='text-gray-800 font-bold '>{item.techUsed}</p>
+  </div>
 
-    </>
+  <Button className='mt-auto p-2 bg-blue-600 hover:bg-blue-700 justify-self-end'>
+    <a className='text-white text-lg font-medium text-decoration-none' target='_blank' rel='noopener noreferrer' href={item.link}>
+      Live Demo
+    </a>
+  </Button>
+</div>
+
   )
 }
 

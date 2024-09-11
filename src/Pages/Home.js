@@ -1,39 +1,49 @@
-import React from 'react'
-import {Container, Row, Col,} from 'react-bootstrap'
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import HeroBg from '../Assets/Images/hero.png'
-import './Pages.css'
+import React from 'react';
+import { LinkedIn, GitHub } from '@mui/icons-material';
+import HeroBg from '../Assets/Images/hero.png';
+import './Pages.css';
 
 function Home() {
   return (
-    <section id='home'  className='container-fluid bg-dark pb-lg-5 pt-lg-5 pt-5 ps-2 pe-2 ps-md-5 pe-md-5 pb-5' >
-      <Container className='ps-lg-5 pe-lg-5 pt-5 pt-xl-5 pb-xl-5'>
-        <Row className='ps-lg-5 pe-lg-5 pt-xl-5 pb-xl-5'>
-          <Col xs={12} md={6} className='text-light d-flex  flex-column pt-md-5 pb-5 '>
-            <h1 className='text-primary pb-2 hero-header fw-bolder'><strong>Front-End React <br />Developer.</strong></h1>
-            <p className='pb-3 fs-4'>Hi, I'm Jerry Nwadinobi. I build scalable Frontend products with great user experiences.</p>
+    <section id="home" className="bg-dark py-10 px-4 md:px-8 lg:px-16">
+      <div className="container mx-auto">
+        <div className="flex flex-col-reverse md:flex-row justify-center items-center">
+          {/* Text Column */}
+          <div className="text-white flex flex-col justify-center items-start mb-8 md:mb-0 md:mr-8 w-full md:w-1/2">
+            <h1 className=" text-4xl md:text-5xl font-bold leading-tight mb-4">
+              Front-End React <br /> <span className="text-primary"> Developer.</span>
+            </h1>
+            <p className="text-lg md:text-xl mb-6">
+              Hi, I'm <strong className="font-semibold">Jerry Nwadinobi</strong>. I specialize in building scalable, user-friendly frontend products that prioritize seamless user experiences.
+            </p>
+            <button className=" text-blue-600 border-2 border-blue-700  font-semibold py-3 px-6 rounded-xl hover:bg-gray-200 transition-transform transform hover:scale-105 duration-300">
+              Let's Work Together
+            </button>
+            {/* Social Links 
             
-            <div>
-              <a className='pe-2 text-light' target='blank' href="https://www.linkedin.com/in/jerry-nwadinobi/"><LinkedInIcon /></a>
-              <a className='pe-2 text-light' target='blank' href="https://github.com/fernandojerry"><GitHubIcon /></a>
+                     <div className="flex space-x-4 mt-4">
+              <a href="https://www.linkedin.com/in/jerry-nwadinobi/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-500">
+                <LinkedIn />
+              </a>
+              <a href="https://github.com/fernandojerry" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-500">
+                <GitHub />
+              </a>
             </div>
             
-          </Col>
-          <Col xs={12} md={6} className='text-light d-flex align-items-center justify-content-center flex-column p-5'>
-           <div className='hero-design p-3 pt-lg-5 pb-lg-5 w-100'>
-            <img className='hero-image' w-100 src={HeroBg} alt="" />
-            <span className='hero-design2 w-100'></span>
-           <span className='hero-design3 w-100'></span>
-           <span className='hero-design4 w-100'></span>
-           </div>
-           
-          </Col>
-         
-        </Row>
-      </Container>
+            */}
+     
+          </div>
+          
+          {/* Image Column */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <div className="relative w-full hero-design">
+              <img src={HeroBg} alt="Hero Background" className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-  )
+  );
 }
 
-export default Home
+export default Home;
