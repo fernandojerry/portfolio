@@ -17,15 +17,14 @@ function Header() {
 
   return (
     <Navbar 
-      collapseOnSelect 
-      bg='dark'  
+      collapseOnSelect  
       variant='dark' 
       expand="lg" 
       sticky="top" 
-      className='my-nav py-0 text-base'
+      className='my-nav bg-gray-900 text-base py-2' // Adjusted padding
       expanded={expanded} // Set the expanded state
     >
-      <Container>
+      <Container className='px-2'> {/* Removed extra padding/margin */}
         <Navbar.Brand className="me-auto">
           <img className='logo' src={HeaderLogo} alt="Brand Logo" />
         </Navbar.Brand>
@@ -87,7 +86,7 @@ function Header() {
             >
               Hire Me
             </button>
-            <div className="pb-3"></div>
+            <div className="pb-3 md:pb-0"></div>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -13,20 +13,18 @@ function Portfolio() {
   }, [projects]);
 
   return (
-    <section id='portfolio' className='container-fluid pt-lg-3 pt-5 ps-2 pe-2 ps-md-5 pe-md-5'>
-      <Container className='ps-xl-3 pe-xl-3 pt-md-4'>
-        <Row className='ps-xl-3 pe-xl-3'>
-          <Col sm={12}>
-            {
-              loading 
-                ? <h4>Loading....</h4> 
-                : <h6 className='text-primary text-uppercase fw-bold text-center'>Portfolio</h6>
-            }
-          </Col>
+    <section id='portfolio' >
+      <Container>
+          {
+            loading 
+              ? <h4>Loading....</h4> 
+              : <h6 className='text-primary text-uppercase fw-bold text-center'>Portfolio</h6>
+          }
+        
           {
             !loading && <PortfolioList data={data} />
           }
-        </Row>
+
       </Container>
     </section>
   );
